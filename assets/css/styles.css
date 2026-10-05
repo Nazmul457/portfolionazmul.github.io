@@ -448,3 +448,10 @@ img{
     right: 10%;
   }
 }
+
+.exp__card {
+  transition: transform 0.3s ease;
+}
+.exp__card:hover {
+  transform: translateY(-5px);
+}
