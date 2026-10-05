@@ -63,7 +63,7 @@ if (contactForm) {
         e.preventDefault();
 
         // Replace service_id and template_id with your EmailJS credentials
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        emailjs.sendForm('service_aomsu36', 'template_3zmd00n', this)
             .then(() => {
                 alert('Message sent successfully!');
                 contactForm.reset();
