@@ -54,7 +54,24 @@ sr.reveal('.skills__img',{delay: 600});
 sr.reveal('.work__img',{interval: 200}); 
 
 /*SCROLL CONTACT*/
-sr.reveal('.contact__input',{interval: 200}); 
+sr.reveal('.contact__input',{interval: 200});
+
+const contactForm = document.querySelector('.contact__form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Replace service_id and template_id with your EmailJS credentials
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(() => {
+                alert('Message sent successfully!');
+                contactForm.reset();
+            }, (error) => {
+                alert('Failed to send message: ' + JSON.stringify(error));
+            });
+    });
+}
 
 
 
